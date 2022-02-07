@@ -8,4 +8,10 @@ router.get('/', (req, res, next) => {
   next();
 },mainController.getMain);
 
+router.get('/axios', (req, res, next) => {
+  console.log('Usuario autenticado y valido');
+  next();
+},mainController.getAxios);
+
 module.exports = router;
+
