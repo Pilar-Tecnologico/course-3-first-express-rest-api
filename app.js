@@ -4,6 +4,7 @@ const logger = require('morgan');
 
 const indexRouter = require('./src/routes/index');
 const usersRouter = require('./src/routes/users');
+const nasaRouter = require('./src/routes/nasa');
 require('dotenv').config();
 
 const app = express();
@@ -15,5 +16,7 @@ app.use(cookieParser());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/nasa', nasaRouter);
+
 
 module.exports = app;
